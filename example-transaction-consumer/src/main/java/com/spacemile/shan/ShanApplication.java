@@ -1,4 +1,4 @@
-package com.spitha.shan;
+package com.spacemile.shan;
 
 import java.io.IOException;
 import java.time.Duration;

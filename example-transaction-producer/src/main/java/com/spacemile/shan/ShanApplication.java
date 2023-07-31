@@ -1,4 +1,4 @@
-package com.spitha.shan;
+package com.spacemile.shan;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
