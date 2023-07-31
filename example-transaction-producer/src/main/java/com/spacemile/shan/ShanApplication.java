@@ -19,7 +19,7 @@ public class ShanApplication {
 	    Random random = new Random();
             
             Properties prop = new Properties();
-            prop.put("bootstrap.servers", "172.17.25.40:9092,172.17.25.41:9092,172.17.25.42:9092"); // server, kafka host
+            prop.put("bootstrap.servers", "localhost:9092"); // server, kafka host
             prop.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");   
             prop.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer"); 
             prop.put("acks", "all");   
