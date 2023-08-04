@@ -26,6 +26,7 @@ public class ShanApplication {
         conf.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         conf.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
 
+        @SuppressWarnings("resource")
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(conf);
         consumer.subscribe(Collections.singletonList(TOPIC_NAME));
 
