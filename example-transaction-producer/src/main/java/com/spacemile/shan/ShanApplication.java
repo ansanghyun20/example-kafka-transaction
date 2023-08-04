@@ -15,17 +15,17 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 @SpringBootApplication
 public class ShanApplication {
 
-    private static final String TOPIC_NAME = "SHAN_TEST_TRANSACTION"; // 토픽명
+    private static final String TOPIC_NAME = "SHAN_TEST_TRANSACTION";
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
-        Random random = new Random();
 
         Properties prop = new Properties();
         prop.put("bootstrap.servers", "localhost:9092"); // server, kafka host
         prop.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         prop.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         prop.put("acks", "all");
+
+        // 트랜잭션 프로듀서 설정
         prop.put("transactional.id", "SHAN_TEST_TRANSACTION_PRODUCER");
         prop.put("enable.idempotence", "true");
 
